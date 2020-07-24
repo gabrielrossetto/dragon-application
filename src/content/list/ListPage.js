@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
 import { fetchDragons } from '../../redux/actions/dragonsActions'
-
 import { ListItem } from '../../commons/ListItem'
+import { Header } from '../../commons/Header'
 
 const List = ({ dispatch, loading, dragons, hasErrors }) => {
   useEffect(() => {
@@ -19,8 +18,7 @@ const List = ({ dispatch, loading, dragons, hasErrors }) => {
 
   return (
     <section>
-      {/* fazer o header com add aqui component */}
-      <h1>Dragons</h1>
+      <Header />
       {loadDragons()}
     </section>
   )

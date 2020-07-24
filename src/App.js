@@ -7,16 +7,18 @@ import {
 } from 'react-router-dom'
 
 import { Navbar } from './commons/Navbar'
-import List from './content/list/List'
-import ListDetail from './content/list/ListDetail'
+import ListPage from './content/list/ListPage'
+import ListDetailPage from './content/list/ListDetailPage'
+import AddPage from './content/list/AddPage'
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={List} />
-        <Route exact path="/dragons/:id" component={ListDetail} />
+        <Route exact path="/" component={ListPage} />
+        <Route exact path="/dragons/:id" component={ListDetailPage} />
+        <Route exact path="/dragonsAdd" component={AddPage} />
         <Redirect to="/" />
       </Switch>
     </Router>
