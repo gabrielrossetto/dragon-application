@@ -29,8 +29,10 @@ export const deleteDragonSuccess = dragon => ({
 })
 export const deleteDragonFailure = () => ({ type: DELETE_DRAGON_FAILURE })
 
-
-
+export const OPEN_EDIT_DIALOG = 'OPEN_EDIT_DIALOG'
+export const CLOSE_EDIT_DIALOG = 'CLOSE_EDIT_DIALOG'
+export const openEditDialog = (dragon) => ({ type: OPEN_EDIT_DIALOG, payload: dragon })
+export const closeEditDialog = () => ({ type: CLOSE_EDIT_DIALOG })
 
 export function fetchDragon(dragonId) {
   return async dispatch => {
@@ -89,5 +91,11 @@ export function removeDragon(dragonId) {
     } catch (error) {
       dispatch(deleteDragonFailure())
     }
+  }
+}
+
+export function openDialog(dragon) {
+  return async dispatch => {
+    dispatch(openEditDialog(dragon))
   }
 }

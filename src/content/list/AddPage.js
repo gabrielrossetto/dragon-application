@@ -7,8 +7,8 @@ import { createDragon } from '../../redux/actions/dragonActions'
 const AddItem = ({
   dispatch,
 }) => {
-  const [form, setForm] = useState({});
   let history = useHistory();
+  const [form, setForm] = useState({});
 
   const updateForm = useCallback((fieldName, event, parameterKey) => {
     setForm({

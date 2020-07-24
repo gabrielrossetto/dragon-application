@@ -1,5 +1,5 @@
 import React from 'react'
-import { EditButton } from './EditButton';
+import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
 
 export const ActionButtons = ({ dragon, dispatch }) => (
