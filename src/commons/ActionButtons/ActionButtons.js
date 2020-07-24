@@ -1,10 +1,10 @@
 import React from 'react'
 import { EditButton } from './EditButton';
-import { DeleteButton } from './DeleteButton';
+import DeleteButton from './DeleteButton';
 
-export const ActionButtons = () => (
+export const ActionButtons = ({ dragon, dispatch }) => (
       <div style={{ float: 'right' }}>
-            <EditButton />
-            <DeleteButton />
+            <EditButton dragon={dragon} dispatch={dispatch} />
+            <DeleteButton dragon={dragon} dispatch={dispatch} />
       </div>
 )

@@ -13,7 +13,7 @@ const List = ({ dispatch, loading, dragons, hasErrors }) => {
     if (loading) return <p>Loading dragons...</p>
     if (hasErrors) return <p>Unable to display dragons</p>
 
-    return dragons.map(dragon => <ListItem key={dragon.id} dragon={dragon} excerpt />)
+    return dragons.map(dragon => <ListItem key={dragon.id} dragon={dragon} dispatch={dispatch} excerpt />)
   }
 
   return (
