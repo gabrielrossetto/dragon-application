@@ -1,10 +1,15 @@
 import React from 'react'
 
-export const Header = () => (
+export const Header = ({ text, showButton }) => (
       <div class="header">
-            <a class="logo">Dragons</a>
-            <div class="header-right">
-                  <a class="active" href={'/dragonsAdd/'}>Create</a>
-            </div>
+            <a class="logo">{text}</a>
+            {showButton && (
+                  <>
+                        <div class="header-right">
+                              <a class="active" href={'/dragonsAdd/'}>Create</a>
+                        </div>
+                  </>
+            )}
+
       </div>
 )

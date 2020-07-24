@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom'
-
 import { Navbar } from './commons/Navbar/Navbar'
 import ListPage from './content/list/ListPage'
 import ListDetailPage from './content/list/ListDetailPage'

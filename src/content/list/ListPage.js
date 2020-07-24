@@ -18,7 +18,7 @@ const List = ({ dispatch, loading, dragons, hasErrors }) => {
 
   return (
     <section>
-      <Header />
+      <Header text='Dragons' showButton={true} />
       {loadDragons()}
     </section>
   )
