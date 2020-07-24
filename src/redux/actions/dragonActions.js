@@ -23,14 +23,6 @@ export const postDragonSuccess = dragon => ({
 })
 export const postDragonFailure = () => ({ type: POST_DRAGON_FAILURE })
 
-const mock = {
-  name: 'test90',
-  type: 'type90',
-  createdAt: new Date().toString(),
-  histories: []
-};
-
-
 export function fetchDragon(dragonId) {
   return async dispatch => {
     debugger;
@@ -49,7 +41,8 @@ export function fetchDragon(dragonId) {
   }
 }
 
-export function createDragon() {
+export function createDragon(dragon) {
+  debugger;
   return async dispatch => {
     debugger;
     dispatch(postDragon())
@@ -60,7 +53,7 @@ export function createDragon() {
         {
           method: 'post',
           headers: new Headers({ 'content-type': 'application/json' }),
-          body: JSON.stringify(mock)
+          body: JSON.stringify(dragon)
         }
       )
       const data = await response.json()

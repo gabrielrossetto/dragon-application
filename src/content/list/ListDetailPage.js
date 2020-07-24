@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchDragon } from '../../redux/actions/dragonActions'
 
-import { ListItemDetail } from '../../commons/ListItemDetail'
+import { ListItemDetail } from '../../commons/List/ListItemDetail'
 
 const ListDetail = ({
   match,

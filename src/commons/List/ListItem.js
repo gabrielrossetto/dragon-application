@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ActionButtons } from './ActionButtons';
+import { ActionButtons } from '../ActionButtons/ActionButtons';
 
 export const ListItem = ({ dragon, excerpt }) => (
   <article className={excerpt ? 'post-excerpt' : 'post'}>

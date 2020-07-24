@@ -6,7 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom'
 
-import { Navbar } from './commons/Navbar'
+import { Navbar } from './commons/Navbar/Navbar'
 import ListPage from './content/list/ListPage'
 import ListDetailPage from './content/list/ListDetailPage'
 import AddPage from './content/list/AddPage'

@@ -9,6 +9,10 @@ import App from './App'
 import rootReducer from './redux/reducers/rootreducer'
 
 import './commons/style.css'
+import './commons/ActionButtons/actionButtons.css'
+import './commons/Header/header.css'
+import './commons/List/list.css'
+import './commons/Navbar/navbar.css'
 
 const store = createStore(
   rootReducer,

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchDragons } from '../../redux/actions/dragonsActions'
-import { ListItem } from '../../commons/ListItem'
-import { Header } from '../../commons/Header'
+import { ListItem } from '../../commons/List/ListItem'
+import { Header } from '../../commons/Header/Header'
 
 const List = ({ dispatch, loading, dragons, hasErrors }) => {
   useEffect(() => {
