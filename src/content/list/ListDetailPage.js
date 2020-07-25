@@ -18,8 +18,8 @@ const ListDetail = ({
   }, [dispatch, match])
 
   const loadDragon = () => {
-    if (loading.dragon) return <p>Loading dragon...</p>
-    if (hasErrors.dragon) return <p>Unable to display dragon</p>
+    if (loading) return <p>Loading dragon...</p>
+    if (hasErrors) return <p>Unable to display dragon</p>
 
     return <ListItemDetail key={dragon.id} dragon={dragon} />;
   }

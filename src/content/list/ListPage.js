@@ -50,7 +50,7 @@ const List = ({ dispatch, loading, dragons, hasErrors, dialogOpen, dragonEdit })
 
   const showEditDialog = () => {
     return (
-      <dialog id="test" open={dialogOpen}>
+      <dialog id="test" open={dialogOpen} className="dialog">
         <form method="dialog">
           <input type="text" name="name" placeholder="Name" value={form.name} onChange={event => updateForm('name', event, 'value')} />
           <input type="text" name="type" placeholder="Type" value={form.type} onChange={event => updateForm('type', event, 'value')} />

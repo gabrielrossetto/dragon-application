@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ActionButtons } from '../ActionButtons/ActionButtons';
 
 export const ListItem = ({ dragon, dispatch, excerpt }) => (
-  <article className={excerpt ? 'post-excerpt' : 'post'}>
+  <article className={excerpt ? 'item-excerpt' : 'item'}>
 
     {excerpt && (
       <>

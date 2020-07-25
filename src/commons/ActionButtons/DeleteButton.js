@@ -10,7 +10,7 @@ const DeleteButton = ({ dragon, dispatch }) => {
       }
 
       return (
-            <button className="btn" onClick={handleDeleteDragon}><i className="fa fa-remove"></i></button>
+            <button className="btn" onClick={handleDeleteDragon}><i className="fa fa-trash"></i></button>
       )
 }
 
