@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
 import { fetchDragon } from '../../redux/actions/dragonActions'
-
+import { Header } from '../../commons/Header/Header'
 import { ListItemDetail } from '../../commons/List/ListItemDetail'
 
 const ListDetail = ({
@@ -27,7 +26,7 @@ const ListDetail = ({
 
   return (
     <section>
-      <h2>Dragon Detail</h2>
+      <Header text='Dragon Detail' showButton={false} />
       {loadDragon()}
     </section>
   )
