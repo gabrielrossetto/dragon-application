@@ -1,3 +1,5 @@
+import { sortList } from '../../commons/utils'
+
 export const GET_DRAGONS = 'GET GET_DRAGONS'
 export const GET_DRAGONS_SUCCESS = 'GET_DRAGONS_SUCCESS'
 export const GET_DRAGONS_FAILURE = 'GET_DRAGONS_FAILURE'
@@ -5,7 +7,7 @@ export const GET_DRAGONS_FAILURE = 'GET_DRAGONS_FAILURE'
 export const getDragons = () => ({ type: GET_DRAGONS })
 export const getDragonsSuccess = dragons => ({
   type: GET_DRAGONS_SUCCESS,
-  payload: dragons,
+  payload: sortList(dragons),
 })
 export const getDragonsFailure = () => ({ type: GET_DRAGONS_FAILURE })
 
