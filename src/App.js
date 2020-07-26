@@ -19,8 +19,8 @@ const App = () => {
         <Navbar />
       )}
       <Switch>
+        <Route path="/login" component={LoginPage} />
         <PrivateRoute exact path="/" component={ListPage} />
-        <Route exact path="/login" component={LoginPage} />
         <PrivateRoute exact path="/dragons/:id" component={ListDetailPage} />
         <PrivateRoute exact path="/dragonsAdd" component={AddPage} />
         <Redirect to="/" />

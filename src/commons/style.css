@@ -59,3 +59,22 @@ input[type=password] {
   width: 50%;
   border-color: gray;
 }
+
+.loginForm {
+  padding: 40px 100px 100px 100px;
+}
+
+.loginLogo {
+  color: #ea3546;
+  display: block;
+  margin: auto;
+  padding: 50px;
+}
+
+.line {
+  width: 50%;
+  border-bottom: 1px solid #9E9E9E;
+  display: block;
+  margin: auto;
+  margin-bottom: 24px;
+}

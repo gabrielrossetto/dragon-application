@@ -10,8 +10,8 @@ export const PrivateRoute = ({ component: Component, ...rest }) => (
 )
 
 export const isUserValid = (username, password) => {
-      const user = 'test';
-      const pwd = 'test';
+      const user = 'admin';
+      const pwd = 'admin';
 
       return user === username && pwd === password;
 }

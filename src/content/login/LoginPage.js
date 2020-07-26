@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { connect } from 'react-redux'
 import { doLogin } from '../../redux/actions/authActions'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDragon } from "@fortawesome/free-solid-svg-icons";
 
 const Login = ({ dispatch, auth }) => {
       useEffect(() => {
@@ -30,25 +32,20 @@ const Login = ({ dispatch, auth }) => {
       }
 
       return (
-            <div className="col-md-6 col-md-offset-3">
-                  <h2>Login</h2>
+            <div className="col-md-6 col-md-offset-3 loginForm">
+                  <FontAwesomeIcon icon={faDragon} className="loginLogo" size="7x" />
+                  <div class="line"></div>
                   <form name="form" onSubmit={handleSubmit}>
-                        <div className={'form-group' + (form.submitted && !form.username ? ' has-error' : '')}>
-                              <label htmlFor="username">Username</label>
-                              <input type="text" className="form-control" name="username" value={form.username} onChange={event => updateForm('username', event, 'value')} />
-                              {form.submitted && !form.username &&
-                                    <div className="help-block">Username is required</div>
-                              }
+                        <div>
+                              <label>Username</label>
+                              <input type="text" value={form.username} onChange={event => updateForm('username', event, 'value')} />
                         </div>
-                        <div className={'form-group' + (form.submitted && !form.password ? ' has-error' : '')}>
-                              <label htmlFor="password">Password</label>
-                              <input type="password" className="form-control" name="password" value={form.password} onChange={event => updateForm('password', event, 'value')} />
-                              {form.submitted && !form.password &&
-                                    <div className="help-block">Password is required</div>
-                              }
+                        <div>
+                              <label>Password</label>
+                              <input type="password" value={form.password} onChange={event => updateForm('password', event, 'value')} />
                         </div>
-                        <div className="form-group">
-                              <button className="btn btn-primary">Login</button>
+                        <div>
+                              <button className="formSubmit">Login</button>
                         </div>
                   </form>
             </div>

@@ -29,5 +29,7 @@ export function doLogout() {
       return dispatch => {
             dispatch(requestLogout());
             localStorage.removeItem('username');
+            history.push('/login');
+            window.location.reload();
       };
 }
